@@ -20,8 +20,22 @@
                 <a href = '#waitlist'>
                 <button class="btn primary">Join waitlist</button>
                 </a>
-                <button class="btn secondary">Watch Demo Video</button>
+                <button id="open" class="btn secondary">Watch Demo Video</button>
             </div>
+            <dialog class="modal">
+                <div  class="modal-div">
+                     <iframe
+              src="https://player.vimeo.com/video/1041069873?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              title="DM Fast Demo"
+              width="560"
+              style=" border-radius : 10px"
+              height="315"
+              frameBorder={0}
+            ></iframe>
+                <button class="close-modal">Close</button>
+                </div>
+            </dialog>
         </section>
 
         <section class="analysis">
@@ -91,9 +105,38 @@
         </section>
 
     </main>
-            <div class="footer"></div>
+            <div class="footer">
+                <div class="inner-footer">
+                <div class="links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li>
+                <a href="./privacy.html">Privacy</a>
+                </li>
+                <li>
+                <a href="./refunds.html">Refunds</a>
+                </li>
+                <li>
+                <a href="./terms.html">Terms and Conditions</a>
+</li>
+                </ul>
+                </div>
+                <p>© DM Fast. All rights reserved.</p>
+                </div>
+            </div>
 
         </div>
+          <script>
+        const modal = document.querySelector('.modal')
+        const close = document.querySelector('.close-modal')
+        const open = document.querySelector('#open')
+        open.addEventListener("click", () => {
+            modal.showModal()
+        })
+        close.addEventListener("click", () => {
+            modal.close()
+        })
+    </script>
 </body>
 </html>
 
